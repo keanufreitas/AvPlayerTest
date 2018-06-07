@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="n90-lV-crs">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ugM-22-OsQ">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="n90-lV-crs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ymv-5g-V3q">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="axn-gt-gAc" kind="relationship" relationship="viewControllers" id="vEV-wN-K3w"/>
+                        <segue destination="pfV-2q-Ce0" kind="relationship" relationship="viewControllers" id="1TJ-YZ-4qs"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x32-E8-moB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="51" y="49"/>
+        </scene>
+        <!--Movies Collection Collection View Controller-->
+        <scene sceneID="D07-Q4-t3B">
+            <objects>
+                <collectionViewController id="bzg-jP-Brh" customClass="MoviesCollectionCollectionViewController" customModule="AppleTVTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="yfc-US-pob">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uQV-JK-i2N">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCell" id="tyT-Cq-1rb" customClass="MoviesCollectionViewCell" customModule="AppleTVTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="297" height="473"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="297" height="473"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MJ9-WM-EzM">
+                                            <rect key="frame" x="-1" y="0.0" width="298" height="378"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBP-ct-Zxr">
+                                            <rect key="frame" x="0.0" y="378" width="297" height="95"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="MJ9-WM-EzM" firstAttribute="height" secondItem="tyT-Cq-1rb" secondAttribute="height" multiplier="0.8" id="0tC-V6-sSm"/>
+                                    <constraint firstItem="xBP-ct-Zxr" firstAttribute="height" secondItem="tyT-Cq-1rb" secondAttribute="height" multiplier="0.2" id="8i0-22-NCl"/>
+                                    <constraint firstItem="xBP-ct-Zxr" firstAttribute="width" secondItem="tyT-Cq-1rb" secondAttribute="width" id="9Sf-th-HtL"/>
+                                    <constraint firstItem="MJ9-WM-EzM" firstAttribute="width" secondItem="tyT-Cq-1rb" secondAttribute="width" id="UZU-VZ-bp2"/>
+                                    <constraint firstItem="xBP-ct-Zxr" firstAttribute="centerX" secondItem="tyT-Cq-1rb" secondAttribute="centerX" id="V2Q-SK-IhX"/>
+                                    <constraint firstItem="xBP-ct-Zxr" firstAttribute="centerY" secondItem="tyT-Cq-1rb" secondAttribute="centerY" multiplier="1.8" id="pf5-J3-BHK"/>
+                                    <constraint firstItem="MJ9-WM-EzM" firstAttribute="centerY" secondItem="tyT-Cq-1rb" secondAttribute="centerY" multiplier="0.8" id="sAQ-Kh-Z6T"/>
+                                    <constraint firstItem="MJ9-WM-EzM" firstAttribute="centerX" secondItem="tyT-Cq-1rb" secondAttribute="centerX" id="z6P-iD-Q6x"/>
+                                </constraints>
+                                <size key="customSize" width="297" height="473"/>
+                                <connections>
+                                    <outlet property="thumbnail" destination="MJ9-WM-EzM" id="oHz-9s-tS6"/>
+                                    <outlet property="titleLbl" destination="xBP-ct-Zxr" id="3OH-b8-kuK"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="bzg-jP-Brh" id="nbh-wg-br8"/>
+                            <outlet property="delegate" destination="bzg-jP-Brh" id="e2K-gQ-GFJ"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="YCc-kX-rlS"/>
+                    <connections>
+                        <segue destination="lal-nk-aF3" kind="show" identifier="showMoviesDetail" id="WAT-3K-cmh"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TRG-1C-O3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5121" y="-786"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="w74-ak-aio">
+            <objects>
+                <viewController id="lal-nk-aF3" customClass="ViewController" customModule="AppleTVTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="19k-36-QUg"/>
+                        <viewControllerLayoutGuide type="bottom" id="ehs-vo-i2m"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vAF-3K-iXW">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GIQ-Ks-vJ0">
+                                <rect key="frame" x="73" y="109" width="561" height="840"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Private Money" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DqQ-Pf-RNX">
+                                <rect key="frame" x="699" y="88" width="1154" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="115"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="mTu-pV-rLz">
+                                <rect key="frame" x="699" y="703" width="1154" height="246"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Everyone knows that growing up is hard, and life is no easier for high school junior Nadine (Hailee Steinfeld), who is already at peak awkwardness when her all-star older brother Darian (Blake Jenner) starts dating her best friend Krista (Haley Lu Richardson). All at once, Nadine feels more alone than ever, until the unexpected friendship of a thoughtful boy (Hayden Szeto) gives her a glimmer of hope that things just might not be so terrible after all.</string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="66" sectionFooterHeight="66" translatesAutoresizingMaskIntoConstraints="NO" id="qid-XH-KJ0">
+                                <rect key="frame" x="699" y="249" width="1154" height="433"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="Q4b-ow-C7e" detailTextLabel="Ih1-qc-ufp" rowHeight="100" style="IBUITableViewCellStyleSubtitle" id="MeL-mo-56N">
+                                        <rect key="frame" x="0.0" y="66" width="1131" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MeL-mo-56N" id="aI7-FE-7vd">
+                                            <rect key="frame" x="0.0" y="0.0" width="1131" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Q4b-ow-C7e">
+                                                    <rect key="frame" x="20" y="4" width="72" height="46"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ih1-qc-ufp">
+                                                    <rect key="frame" x="20" y="50" width="128" height="46"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="M5i-2p-XbB"/>
+                    </view>
+                    <connections>
+                        <outlet property="cover" destination="GIQ-Ks-vJ0" id="qc3-15-oIq"/>
+                        <outlet property="descLbl" destination="mTu-pV-rLz" id="ykx-pq-nD0"/>
+                        <outlet property="lblTitle" destination="DqQ-Pf-RNX" id="RaH-ng-9JR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7sq-ge-y4F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7346" y="-772"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="hjr-YX-DsG">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="nrP-qQ-KHF" customClass="PlayerViewController" customModule="AppleTVTest" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Reh-X3-cws" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9600" y="-772"/>
+        </scene>
+        <!--Courses-->
+        <scene sceneID="mQB-6Z-6pP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="axn-gt-gAc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Courses" id="RJt-0f-Ihg"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TPF-vY-UsH">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="145"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bzg-jP-Brh" kind="relationship" relationship="rootViewController" id="Hz9-MA-wq7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rfD-vA-IPz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2703" y="-786"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="kaS-pj-UO9">
+            <objects>
+                <viewController id="pfV-2q-Ce0" customClass="SearchViewController" customModule="AppleTVTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DcF-J0-dYN"/>
+                        <viewControllerLayoutGuide type="bottom" id="MBs-Bc-aaR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mvw-dE-nv0">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dt4-VG-ZRq">
+                                <rect key="frame" x="31" y="245" width="1858" height="835"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VIJ-Fx-uvq">
+                                    <size key="itemSize" width="50" height="473"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="pPS-h7-XP7">
+                                        <rect key="frame" x="0.0" y="0.0" width="344" height="473"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="344" height="473"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nkD-c4-WUP">
+                                                    <rect key="frame" x="0.0" y="-1" width="344" height="474"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="nkD-c4-WUP" firstAttribute="width" secondItem="pPS-h7-XP7" secondAttribute="width" id="5Xh-SA-KRc"/>
+                                            <constraint firstItem="nkD-c4-WUP" firstAttribute="centerY" secondItem="pPS-h7-XP7" secondAttribute="centerY" id="FJa-OC-HyN"/>
+                                            <constraint firstItem="nkD-c4-WUP" firstAttribute="height" secondItem="pPS-h7-XP7" secondAttribute="height" id="a9z-9m-47U"/>
+                                            <constraint firstItem="nkD-c4-WUP" firstAttribute="centerX" secondItem="pPS-h7-XP7" secondAttribute="centerX" id="p64-cd-oEz"/>
+                                        </constraints>
+                                        <size key="customSize" width="344" height="473"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4P7-Co-5pc">
+                                <rect key="frame" x="580" y="165" width="760" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pcU-NH-thH"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Search" id="L8n-oH-Wkt"/>
+                    <connections>
+                        <outlet property="collectionView" destination="dt4-VG-ZRq" id="7Tb-Qd-GeW"/>
+                        <outlet property="txtField" destination="4P7-Co-5pc" id="L6f-Qn-7k7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SHM-6O-AC5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2703" y="925"/>
+        </scene>
+    </scenes>
+</document>
