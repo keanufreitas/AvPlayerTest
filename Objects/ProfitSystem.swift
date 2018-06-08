@@ -7,18 +7,21 @@
 //
 
 import Foundation
+import UIKit
 
-class ProfitSystem {
+class ProfitSystem: NSObject {
 
     let title: String
     let cover: String
     let learnID: Int
+    let desc: String
     let segments: [Segment]
 
-    init(title: String, cover: String, learnID: Int, segments: [Segment]) {
+    init(title: String, cover: String, learnID: Int, desc: String, segments: [Segment]) {
         self.title = title
         self.cover = cover
         self.learnID = learnID
+        self.desc = desc
         self.segments = segments
     }
 }
